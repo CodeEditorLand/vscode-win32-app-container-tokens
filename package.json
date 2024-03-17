@@ -8,16 +8,21 @@
   "scripts": {
     "build": "node-gyp rebuild && tsc",
     "clean": "node-gyp clean && rimraf build dist",
-    "prepack": "npm run clean && npm run build"
+    "prepack": "npm run clean && npm run build",
+    "test": "npm run build && node dist/index.test.js"
+  },
+  "prettier": {
+    "printWidth": 100
   },
   "dependencies": {
-    "node-addon-api": "4.3.0"
+    "node-addon-api": "^4.3.0"
   },
   "devDependencies": {
-    "@types/node": "17.0.18",
-    "node-gyp": "8.4.1",
-    "rimraf": "3.0.2",
-    "typescript": "4.5.5"
+    "@types/node": "^17.0.18",
+    "node-gyp": "^8.4.1",
+    "prettier": "^2.5.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.5.5"
   },
   "gypfile": true
 }
