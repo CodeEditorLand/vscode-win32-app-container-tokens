@@ -2,18 +2,16 @@
   "name": "@vscode/win32-app-container-tokens",
   "version": "0.1.0",
   "description": "Native win32 Node.js addon to retrieve named pipes from app containers",
-  "license": "MIT",
-  "author": "Connor Peet <connor@peet.io>",
   "main": "dist/index.js",
+  "gypfile": true,
   "scripts": {
     "build": "node-gyp rebuild && tsc",
+    "test": "npm run build && node dist/index.test.js",
     "clean": "node-gyp clean && rimraf build dist",
-    "prepack": "npm run clean && npm run build",
-    "test": "npm run build && node dist/index.test.js"
+    "prepack": "npm run clean && npm run build"
   },
-  "prettier": {
-    "printWidth": 100
-  },
+  "author": "Connor Peet <connor@peet.io>",
+  "license": "MIT",
   "dependencies": {
     "node-addon-api": "^4.3.0"
   },
@@ -24,5 +22,7 @@
     "rimraf": "^3.0.2",
     "typescript": "^4.5.5"
   },
-  "gypfile": true
+  "prettier": {
+    "printWidth": 100
+  }
 }
