@@ -1,28 +1,42 @@
 {
-  "name": "@vscode/win32-app-container-tokens",
-  "version": "0.1.0",
-  "description": "Native win32 Node.js addon to retrieve named pipes from app containers",
-  "main": "dist/index.js",
-  "gypfile": true,
-  "scripts": {
-    "build": "node-gyp rebuild && tsc",
-    "test": "npm run build && node dist/index.test.js",
-    "clean": "node-gyp clean && rimraf build dist",
-    "prepack": "npm run clean && npm run build"
-  },
-  "author": "Connor Peet <connor@peet.io>",
-  "license": "MIT",
-  "dependencies": {
-    "node-addon-api": "8.0.0"
-  },
-  "devDependencies": {
-    "@types/node": "20.11.30",
-    "node-gyp": "10.0.1",
-    "prettier": "3.2.5",
-    "rimraf": "5.0.5",
-    "typescript": "5.4.2"
-  },
-  "prettier": {
-    "printWidth": 100
-  }
+	"name": "@vscode/win32-app-container-tokens",
+	"version": "0.0.1",
+	"private": false,
+	"description": "Native win32 Node.js addon to retrieve named pipes from app containers",
+	"homepage": "https://github.com/CodeEditorLand/Foundation#readme",
+	"bugs": {
+		"url": "https://github.com/CodeEditorLand/Foundation/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/CodeEditorLand/Foundation.git"
+	},
+	"license": "SEE LICENSE IN LICENSE",
+	"author": {
+		"name": "Playform",
+		"email": "Hello@Playform.Cloud",
+		"url": "https://playform.cloud"
+	},
+	"type": "module",
+	"main": "dist/index.js",
+	"scripts": {
+		"build": "node-gyp rebuild && tsc",
+		"clean": "node-gyp clean && rimraf build dist",
+		"prepack": "npm run clean && npm run build",
+		"prepublishOnly": "TypeScriptESBuild 'Source/**/*.ts'"
+	},
+	"dependencies": {
+		"node-addon-api": "8.0.0"
+	},
+	"devDependencies": {
+		"@types/node": "20.11.30",
+		"node-gyp": "10.0.1",
+		"rimraf": "5.0.5",
+		"typescript": "5.4.2",
+		"typescript-esbuild": "latest"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"gypfile": true
 }
