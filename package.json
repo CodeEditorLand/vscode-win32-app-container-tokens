@@ -1,39 +1,27 @@
 {
-	"author": {
-		"email": "Land@PlayForm.Cloud",
-		"name": "🌆 — Land —",
-		"url": "HTTPS://Land.PlayForm.Cloud"
-	},
-	"bugs": {
-		"url": "HTTPS://GitHub.Com/CodeEditorLand/LandWin32AppContainerTokens/issues"
-	},
-	"dependencies": {
-		"node-addon-api": "8.0.0"
-	},
+	"name": "@vscode/win32-app-container-tokens",
+	"version": "0.0.1",
+	"private": false,
 	"description": "Native win32 Node.js addon to retrieve named pipes from app containers",
-	"devDependencies": {
-		"@playform/build": "0.0.7",
-		"@playform/document": "0.0.6",
-		"@types/node": "20.12.7",
-		"node-gyp": "10.1.0",
-		"rimraf": "5.0.5"
-	},
-	"gypfile": true,
-	"homepage": "HTTPS://GitHub.Com/CodeEditorLand/LandWin32AppContainerTokens#readme",
 	"keywords": [
 		"land"
 	],
-	"license": "SEE LICENSE IN LICENSE",
-	"main": "dist/index.js",
-	"name": "@vscode/win32-app-container-tokens",
-	"private": false,
-	"publishConfig": {
-		"access": "public"
+	"homepage": "HTTPS://GitHub.Com/CodeEditorLand/LandWin32AppContainerTokens#readme",
+	"bugs": {
+		"url": "HTTPS://GitHub.Com/CodeEditorLand/LandWin32AppContainerTokens/issues"
 	},
 	"repository": {
 		"type": "git",
 		"url": "git+HTTPS://github.com/CodeEditorLand/LandWin32AppContainerTokens.git"
 	},
+	"license": "SEE LICENSE IN LICENSE",
+	"author": {
+		"name": "🌆 — Land —",
+		"email": "Land@PlayForm.Cloud",
+		"url": "HTTPS://Land.PlayForm.Cloud"
+	},
+	"type": "module",
+	"main": "dist/index.js",
 	"scripts": {
 		"Document": "Document 'Source/**/*.ts'",
 		"build": "node-gyp rebuild && tsc",
@@ -41,6 +29,18 @@
 		"prepack": "npm run clean && npm run build",
 		"prepublishOnly": "Build 'Source/**/*.ts'"
 	},
-	"type": "module",
-	"version": "0.0.1"
+	"dependencies": {
+		"node-addon-api": "8.0.0"
+	},
+	"devDependencies": {
+		"@playform/build": "0.0.7",
+		"@playform/document": "0.0.6",
+		"@types/node": "20.12.7",
+		"node-gyp": "10.1.0",
+		"rimraf": "5.0.5"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"gypfile": true
 }
