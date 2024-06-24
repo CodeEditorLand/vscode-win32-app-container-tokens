@@ -8,12 +8,12 @@
 		"prepack": "npm run clean && npm run build"
 	},
 	"dependencies": {
-		"node-addon-api": "^4.3.0"
+		"node-addon-api": "^8.0.0"
 	},
 	"devDependencies": {
-		"@types/node": "^17.0.18",
-		"node-gyp": "^8.4.1",
-		"rimraf": "^3.0.2"
+		"@types/node": "^20.14.8",
+		"node-gyp": "^10.1.0",
+		"rimraf": "^5.0.7"
 	},
 	"gypfile": true
 }
