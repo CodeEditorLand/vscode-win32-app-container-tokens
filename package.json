@@ -1,19 +1,19 @@
 {
+	"name": "@vscode/win32-app-container-tokens",
+	"description": "Native win32 Node.js addon to retrieve named pipes from app containers",
+	"main": "dist/index.js",
+	"scripts": {
+		"build": "node-gyp rebuild && tsc",
+		"clean": "node-gyp clean && rimraf build dist",
+		"prepack": "npm run clean && npm run build"
+	},
 	"dependencies": {
 		"node-addon-api": "4.3.0"
 	},
-	"description": "Native win32 Node.js addon to retrieve named pipes from app containers",
 	"devDependencies": {
 		"@types/node": "17.0.18",
 		"node-gyp": "8.4.1",
 		"rimraf": "3.0.2"
 	},
-	"gypfile": true,
-	"main": "dist/index.js",
-	"name": "@vscode/win32-app-container-tokens",
-	"scripts": {
-		"build": "node-gyp rebuild && tsc",
-		"clean": "node-gyp clean && rimraf build dist",
-		"prepack": "npm run clean && npm run build"
-	}
+	"gypfile": true
 }
