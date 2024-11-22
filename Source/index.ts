@@ -12,6 +12,7 @@ const getModule = () => {
 	}
 
 	native ??= require("../build/Release/w32appcontainertokens.node");
+
 	return native;
 };
 
